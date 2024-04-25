@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next"
+import {motion} from "framer-motion"
 import "./navbar.css"
+import { useState } from "react"
 
 export const Navbar = () => {
+    const [bars, setBars] = useState(true)
 
     const {i18n , t} = useTranslation()
     const changeLanguage = (language)=>{
@@ -12,8 +15,20 @@ export const Navbar = () => {
     <>
     
     <div className="navContainer">
-        <span className="logo">Tu logo</span>
-        <ul>
+        <motion.span 
+            initial={{opacity:0, y:-100}}
+            animate={{opacity:1, y:0}}
+            transition={{duration:2}}
+            className="logo">
+            Tu logo
+        </motion.span>
+
+        <motion.ul 
+        className={bars ? "ul": "ul active"}
+        initial={{opacity:0, y:-100}}
+        animate={{opacity:1, y:0}}
+        transition={{duration:2}}
+        >
             <li>
                 <a href="/">{t("Home")}</a>
             </li>
@@ -26,7 +41,13 @@ export const Navbar = () => {
             <li>
                 <a href="/">{t("Contact")}</a>
             </li>
-            <div className="idiomas">
+
+        </motion.ul>
+        <motion.div 
+                initial={{opacity:0, y:-100}}
+                animate={{opacity:1, y:0}}
+                transition={{duration:2}}
+                className="idiomas">
 
                 <button
                     onClick={()=>changeLanguage('en')}>
@@ -37,8 +58,20 @@ export const Navbar = () => {
                     onClick={()=>changeLanguage('es')}>
                     es
                 </button>
-            </div>
-        </ul>
+        </motion.div>
+
+        <motion.i 
+            initial={{opacity:0, y:-100}}
+            animate={{opacity:1, y:0}}
+            transition={{duration:2}}
+            onClick={()=>{setBars(!bars)}}
+            className={
+                bars 
+                ? 
+                "fa-solid fa-bars" 
+                :
+                 "fa-solid fa-xmark"}
+        ></motion.i>
     </div>
     
     </>
