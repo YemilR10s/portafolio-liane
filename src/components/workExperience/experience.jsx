@@ -1,12 +1,14 @@
 
 import Slider from "react-slick";
-import { WorkExperience } from "../../utils/workData.js"
-/* import { WorkExperience } from "../../locales/experience/datos.json" */
+import { useTranslation } from 'react-i18next';
 
 import "./experience.css"
 import { ExperienceCard } from "./experienceCard/experienceCard.jsx"
 
 export const Experience = () => {
+  const { t } = useTranslation();
+  const workExperience = t('workExperience');
+
   
   const settings = {
     dots: true,
@@ -49,7 +51,7 @@ export const Experience = () => {
         <h5>Work Experience</h5>
         <div className="experienceContent">
         <Slider {...settings}>
-          {WorkExperience.map((item, index)=>(
+          {workExperience.map((item, index)=>(
             <ExperienceCard
               key={index}
               company={item.company}

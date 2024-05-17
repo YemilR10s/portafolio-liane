@@ -9,7 +9,8 @@ import enNavbar from "./locales/navbarT/enNavbar.json"
 import esNavbar from "./locales/navbarT/esNavbar.json"
 import enHome from "./locales/homeT/enHome.json"
 import esHome from "./locales/homeT/esHome.json"  
-import enEsDatos from "./locales/experience/datos.json"
+import enDatos from "./locales/experience/datosEn.json"
+import esEsDato from "./locales/experience/datosEs.json"
 import { Experience } from './components/workExperience/experience'
 import { Skills } from './components/skilss/skills'
 
@@ -23,14 +24,14 @@ i18n
       translation:{
         ...enNavbar,
         ...enHome,
-        ...enEsDatos.en
+        ...enDatos
       }
     },
     es:{
       translation:{
         ...esNavbar,
         ...esHome,
-        ...enEsDatos.es
+        ...esEsDato
       }
     }
   },
@@ -38,7 +39,8 @@ i18n
   fallbackLng: 'en',
   interpolation:{
     escapeValue: false
-  }
+  },
+  returnObjects: true 
 })
 
 
