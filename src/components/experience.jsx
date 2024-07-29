@@ -2,8 +2,8 @@
 import Slider from "react-slick";
 import { useTranslation } from 'react-i18next';
 
-import "./experience.css"
-import { ExperienceCard } from "./experienceCard/experienceCard.jsx"
+import "../styles/experience.css"
+import { ExperienceCard } from "./experienceCard.jsx"
 
 export const Experience = () => {
   const { t } = useTranslation();

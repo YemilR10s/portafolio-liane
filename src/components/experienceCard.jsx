@@ -1,5 +1,5 @@
 
-import "./experienceCard.css"
+import "../styles/experienceCard.css"
 
 
 export const ExperienceCard = ({ company, date , description }) => {

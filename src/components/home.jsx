@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import {motion} from "framer-motion"
-import './home.css'
+import '../styles/home.css'
 
 
 export const Home = () => {

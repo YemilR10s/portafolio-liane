@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import {motion} from "framer-motion"
-import "./navbar.css"
+import "../styles/navbar.css"
 import { useState } from "react"
 
 export const Navbar = () => {
@@ -43,7 +43,8 @@ export const Navbar = () => {
             </li>
 
         </motion.ul>
-        <motion.div 
+
+        {/* <motion.div 
                 initial={{opacity:0, y:-100}}
                 animate={{opacity:1, y:0}}
                 transition={{duration:2}}
@@ -58,7 +59,7 @@ export const Navbar = () => {
                     onClick={()=>changeLanguage('es')}>
                     es
                 </button>
-        </motion.div>
+        </motion.div> */}
 
         <motion.i 
             initial={{opacity:0, y:-100}}

@@ -1,0 +1,41 @@
+{
+    "SkillsDatos": [
+        {
+            "title": "Frontend",
+            "icon": "./vite.svg",
+            "skills": [
+                {"skill": "Html5", "percentage": "80%"},
+                {"skill": "Css", "percentage": "90%"},
+                {"skill": "JavaScript", "percentage": "70%"},
+                {"skill": "React", "percentage": "80%"}
+            ]
+        },
+        {
+            "title": "Backend",
+            "icon": "./vite.svg",
+            "skills": [
+                {"skill": "node.js", "percentage": "70%"},
+                {"skill": "express.js", "percentage": "65%"}
+            ]
+        },
+        {
+            "title": "Herramientas",
+            "icon": "./vite.svg",
+            "skills": [
+                {"skill": "git", "percentage": "80%"},
+                {"skill": "vsc", "percentage": "85%"},
+                {"skill": "webpack", "percentage": "50%"},
+                {"skill": "diseño responsive", "percentage": "95%"}
+            ]
+        },
+        {
+            "title": "Habilidades Blandas",
+            "icon": "./vite.svg",
+            "skills": [
+                {"skill": "resolución de problemas", "percentage": "80%"},
+                {"skill": "colaboración", "percentage": "90%"},
+                {"skill": "atención a los detalles", "percentage": "70%"}
+            ]
+        }
+    ]
+}
